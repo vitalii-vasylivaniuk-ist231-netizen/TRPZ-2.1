@@ -1,7 +1,10 @@
 en:
+  logo: "Ivaniuk"
+  greeting: "Welcome to website!"
+  posts_title: "Latest Posts"
   nav:
     home: "Home"
   titles:
-    welcome: "Welcome to our application!"
+    welcome: "Welcome!"
   buttons:
     switch_lang: "Switch to Ukrainian"

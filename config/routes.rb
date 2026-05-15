@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  root 'home#index'
-  get 'home/index'
+  # Це робить сторінку постів головною
+  root "posts#index"
+
+  resources :posts
+  resources :users
 end

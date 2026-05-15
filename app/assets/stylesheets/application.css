@@ -1,10 +1,156 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+/* Базові налаштування */
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #111827; /* Дуже темний, контрастний колір замість сірого */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* Плавний градієнт, який рухається */
+  background: linear-gradient(-45deg, #f4f6f9, #e0eafc, #cfdef3, #eef2f3);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Сама анімація руху фону */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Стилі для шапки */
+.main-header {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* Синій градієнт */
+  color: white;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Тінь стала трохи темнішою */
+  position: relative; /* Важливо для центрування логотипу */
+}
+
+/* СТИЛІ ЛОГОТИПУ */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Тінь для виразності */
+}
+
+.header-spacer {
+  width: 150px; /* Балансує ширину кнопок мови справа */
+}
+
+/* Кнопки перемикання мов */
+.lang-switcher {
+  display: flex;
+  width: 150px;
+  justify-content: flex-end;
+}
+
+.lang-btn {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  font-weight: 600; /* Жирніший шрифт */
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Контейнер для контенту */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Заголовки сторінки */
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+  color: #0f172a; /* Майже чорний колір для максимального контрасту */
+}
+
+.page-header p {
+  color: #334155; /* Більш темний і контрастний підзаголовок */
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Картки постів */
+.post-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Трохи виразніша тінь */
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+  border-left: 5px solid #2a5298;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.post-card h3 {
+  margin-top: 0;
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.post-card p {
+  color: #334155; /* Контрастний текст самого поста */
+  line-height: 1.6;
+}
+
+/* Кнопки дій */
+.btn-primary {
+  display: inline-block;
+  background-color: #27ae60;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700; /* Зробив кнопку більш "вагомою" */
+  margin-top: 20px;
+  transition: background 0.3s;
+  box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: #219653;
+  box-shadow: 0 6px 8px rgba(39, 174, 96, 0.3);
+}
+
+.btn-secondary {
+  display: inline-block;
+  color: #2a5298;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.btn-secondary:hover {
+  text-decoration: underline;
+}
