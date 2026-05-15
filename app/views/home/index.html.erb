@@ -1,0 +1,9 @@
+<h1><%= t('titles.welcome') %></h1>
+
+<div style="margin-top: 20px;">
+  <% if I18n.locale == :uk %>
+    <%= link_to t('buttons.switch_lang'), root_path(locale: :en) %>
+  <% else %>
+    <%= link_to t('buttons.switch_lang'), root_path(locale: :uk) %>
+  <% end %>
+</div>

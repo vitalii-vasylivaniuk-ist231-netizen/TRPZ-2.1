@@ -1,0 +1,7 @@
+en:
+  nav:
+    home: "Home"
+  titles:
+    welcome: "Welcome to our application!"
+  buttons:
+    switch_lang: "Switch to Ukrainian"
